@@ -71,7 +71,7 @@ module.exports = React.createClass
             coverImg={facebook?.coverPhotos?[0]}
           />
           <Main
-            slack={pageData}
+            slack={slack}
           />
           <Footer currentYear={currentYear} startYear={startYear} author={author} title={title} />
           <div id="fb-root"></div>
