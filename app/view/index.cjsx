@@ -11,7 +11,7 @@ module.exports = React.createClass
     router: React.PropTypes.func.isRequired
   }
   render: ->
-    {db, sha, domains, theme, currentYear, startYear, me, pages, filterIndex, facebook} = @props
+    {db, sha, domains, theme, currentYear, startYear, me, pages, filterIndex, facebook, slack} = @props
     {author, description, wufoo, tagline, lead, title, about, mission} = db
     {css, js, meta, settings, navTitle} = theme
     {homepageId, display, defaultDisplay, fluid} = settings
@@ -47,7 +47,7 @@ module.exports = React.createClass
     pageData.theme = settings
     pageTitle = if pageData.title then "#{title} | #{pageData.title}" else title
 
-    if currentRoute?.name is 'iframe' or currentRoute?.name is 'opportunities' or currentRoute?.name is 'opDetail'
+    if currentRoute?.name is 'iframe'
       bodyEl =
         <Main
           pageData={pageData}
@@ -71,13 +71,7 @@ module.exports = React.createClass
             coverImg={facebook?.coverPhotos?[0]}
           />
           <Main
-            pageData={pageData}
-            tagline={tagline}
-            lead={lead}
-            title={title}
-            pages={pages}
-            filterIndex={filterIndex}
-            bgImg={facebook?.coverPhotos?[1]}
+            slack={pageData}
           />
           <Footer currentYear={currentYear} startYear={startYear} author={author} title={title} />
           <div id="fb-root"></div>

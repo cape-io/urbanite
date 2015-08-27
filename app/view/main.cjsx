@@ -8,6 +8,8 @@ module.exports = React.createClass
 
   render: ->
     {slack} = @props
+    if slack
+      slackEl = <Blurb content={slack.content} userName={slack.user_name} />
 
     <main>
       <section id="hero" className="center white">
@@ -38,8 +40,9 @@ module.exports = React.createClass
             <p className="lead1"><a className="uno md-col-6 mlrauto center scrolling" href="#question">Share your thoughts and ideas in the form below.</a>
             </p>
           </div>
-          <Blurb content="sample content" user_name="kb" />
-          <div>blue</div>
+
+          {slackEl}
+
         </div>
       </section>
       <section id="question" className="border-top border-bottom bg-gray">
@@ -63,7 +66,7 @@ module.exports = React.createClass
               <div id="mce-responses" className="clear">
                 <div className="response" id="mce-error-response" style={{display: 'none'}} />
                 <div className="response" id="mce-success-response" style={{display: 'none'}} />
-              </div>    {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups*/}
+              </div>
               <div style={{position: 'absolute', left: '-5000px'}}>
                 <input type="text" name="b_f623dacbd658b74d58b5af65f_49e96d7460" tabIndex={-1} defaultValue />
               </div>

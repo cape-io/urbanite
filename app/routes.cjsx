@@ -24,9 +24,7 @@ Mixer = require './view/mixer/mixer'
 module.exports =
   <Route name="app" path="/" handler={Index}>
     <DefaultRoute handler={Page}/>
-    <Route name="mixer" handler={Mixer}>
-      <Route name="editProfile" path="profile/" handler={EditProfile} />
-    </Route>
+
     <Route name="login" handler={Login}>
       <DefaultRoute handler={LoginForm} />
       <Route name="checkEmail" path="/login/ok" handler={LoginOk} />
