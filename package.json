@@ -1,0 +1,46 @@
+{
+  "name": "cape.io",
+  "homepage": "https://www.cape.io",
+  "version": "0.0.1",
+  "description": "Website files for http://www.cape.io",
+  "main": "app/app.cjsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sync": "browser-sync start --proxy 'w.l.cape.io' --files 'public/*.js'",
+    "dev": "watchify app/app.cjsx --extension='.cjsx' --extension='.coffee' -d -v -o 'exorcist public/app.js.map > public/app.js'",
+    "build": "browserify ./ -t coffee-reactify --extension='.cjsx' --extension='.coffee' -g uglifyify --debug | exorcist public/app.js.map > public/app.js && zopfli public/app.js",
+    "prod": "env NODE_ENV=\"production\" browserify ./ -t coffee-reactify --extension='.cjsx' --extension='.coffee' | uglifyjs > public/app.js && zopfli public/app.js",
+    "clean": "rm -f ./public/*"
+  },
+  "author": "Kai Curry <kai@cape.io> (http://www.cape.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "ampersand-collection": "1.x",
+    "ampersand-model": "^5.0.3",
+    "ampersand-rest-collection": "^4.0.0",
+    "ampersand-state": "4.x",
+    "ampersand-sync": "^3.0.7",
+    "cookies-js": "^1.2.1",
+    "lodash": "3.x",
+    "moment": "2.x",
+    "qs": "2.x",
+    "react": "0.13.x",
+    "react-bootstrap": "^0.20.1",
+    "react-router": "0.13.x",
+    "reactable": "^0.10.1",
+    "superagent": "0.x",
+    "tcomb": "^1.0.1",
+    "tcomb-form": "^0.4.8",
+    "tcomb-validation": "^1.0.3",
+    "validator": "3.x",
+    "formsy-react": "x",
+    "formsy-react-components": "^0.3.0",
+    "cape-react-contact": "git://github.com/cape-io/cape-react-contact",
+    "ampersand-filtered-subcollection": "^2.0.4",
+    "react-datepicker": "^0.11.5"
+  },
+  "devDependencies": {
+    "coffee-reactify": "*",
+    "uglifyify": "^3.0.1"
+  }
+}
