@@ -13,9 +13,9 @@ module.exports = React.createClass
 
     <main>
       <section id="hero" className="center white">
-        <div className="md-col-7 mlrauto">
+        <div className="eight columns mlrauto">
           <img src="urb-logo-trans2.png" className="mt2 logo-icon" />
-          <h1 className="h1 h0-responsive mt2 mb0 text-shadow allcaps">Urbanite Baltimore</h1>
+          <h1 className="h1 mt2 mb0 text-shadow allcaps">Urbanite Baltimore</h1>
           <p className="h3 text-shadow pb2">Special Issue — November 2015</p>
         </div>
       </section>
@@ -28,16 +28,16 @@ module.exports = React.createClass
             </div>
           </div>
           <div className="relative">
-            <p className="lead3 md-col-7 mlrauto">
+            <p className="lead3 eight columns mlrauto">
               For nine years, <em>Urbanite</em> magazine told stories about the city—its people, its problems, and its potential. Its last issue was published in 2012. But in the aftermath of the civil unrest that gripped the city in the spring of 2015, several members of the staff reconvened to produce a special issue, both online and in print. At this critical moment in the city’s history, we’re convinced that Baltimore needs clear-eyed perspective on its most intractable issues: racial justice, economic opportunity, and public safety. And it needs inspired solutions for moving past them.
             </p>
-            <p className="lead2 md-col-5 offset-by-two">
+            <p className="lead2 six columns offset-by-two">
               Residents have responded to April's unrest in lots of different ways—with anger, generosity, hope, and sometimes all of the above. We’re asking our former (and future) readers to share their experiences and contribute their best ideas on how to make this city work better. What actions have inspired you? And what do you think Baltimore needs now to move forward?
             </p>
-            <p className="lead1 md-col-5 offset-by-seven">
+            <p className="lead1 six columns offset-by-seven">
               Our goal is the help change the discussion from one mired in frustration and despair to one that is both realistic and full of possibility.
             </p>
-            <p className="lead1"><a className="uno md-col-6 mlrauto center scrolling" href="#question">Share your thoughts and ideas in the form below.</a>
+            <p className="lead1"><a className="uno half mlrauto center scrolling" href="#question">Share your thoughts and ideas in the form below.</a>
             </p>
           </div>
 
@@ -47,7 +47,7 @@ module.exports = React.createClass
       </section>
       <section id="question" className="border-top border-bottom bg-gray">
         <div className="container">
-          <div className="md-col-8 mlrauto">
+          <div className="ten columns mlrauto">
             <iframe src="https://docs.google.com/forms/d/1JUwnYTRew291RBCDLqn9CcQSK9Gi9FNJYvHSPXGj0Ug/viewform?embedded=true" width="100%" height={750} frameBorder={0} marginHeight={0} marginWidth={0}>Loading...</iframe>
           </div>
         </div>
@@ -55,7 +55,7 @@ module.exports = React.createClass
 
       <section id="signup" className>
         <div id="mc_embed_signup" className="container px4 white">
-          <form action="//UrbaniteBaltimore.us11.list-manage.com/subscribe/post?u=f623dacbd658b74d58b5af65f&id=49e96d7460" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate md-col-10 relative" target="_blank" noValidate>
+          <form action="//UrbaniteBaltimore.us11.list-manage.com/subscribe/post?u=f623dacbd658b74d58b5af65f&id=49e96d7460" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate twelve columns relative" target="_blank" noValidate>
             <div id="mc_embed_signup_scroll">
               <h1 className="h3 caps center mt0 mb2">Stay up to date</h1>
               <div className="mc-field-group clearfix">
@@ -81,12 +81,12 @@ module.exports = React.createClass
       <section id="misc" className>
         <div className="container">
           <div className="clearfix mxn2">
-            <div className="md-col md-col-4 center card archive">
+            <div className="five columns center card archive">
               <i className="fa fa-book fa-5x text-gradient" />
               <h2 className="h1 mb0">Archive</h2>
               <p><a href="http://issuu.com/urbanitemagazine" className="black">Past issues of Urbanite can currently be found on Issuu.com</a></p>
             </div>
-            <div className="md-col md-col-4 center card contact">
+            <div className="five columns center card contact">
               <i className="fa fa-envelope fa-5x text-gradient" />
               <h2 className="h1 mb0">Contact</h2>
               <p>team@urbanitebaltimore.com</p>
