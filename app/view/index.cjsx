@@ -61,21 +61,19 @@ module.exports = React.createClass
         />
     else
       bodyEl =
-        <div className="container">
-          <Header
-            title={title}
-            tagline={tagline}
-            about={about}
-            mission={mission}
-            settings={settings}
-            coverImg={facebook?.coverPhotos?[0]}
-          />
-          <Main
-            slack={slack}
-          />
-          <Footer currentYear={currentYear} startYear={startYear} author={author} title={title} />
-          <div id="fb-root"></div>
-        </div>
+        <Header
+          title={title}
+          tagline={tagline}
+          about={about}
+          mission={mission}
+          settings={settings}
+          coverImg={facebook?.coverPhotos?[0]}
+        />
+        <Main
+          slack={slack}
+        />
+        <Footer currentYear={currentYear} startYear={startYear} author={author} title={title} />
+        <div id="fb-root"></div>
 
     <html>
       <head>
